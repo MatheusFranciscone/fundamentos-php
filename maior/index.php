@@ -31,7 +31,7 @@
                     <a class="nav-link" href="../boasvindas/index.php">Ativ.3</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Ativ.4</a>
+                    <a class="nav-link" href="../total/index.php">Ativ.4</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Ativ.5</a>

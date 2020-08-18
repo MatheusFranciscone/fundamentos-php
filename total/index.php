@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>Atividade Boas Vindas</title>
+    <title>Atividade Total</title>
 </head>
 
 <body>
@@ -27,10 +27,10 @@
                     <a class="nav-link" href="../par/index.php">Ativ.2</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Ativ.3 <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="../boasvindas/index.php">Ativ.3</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../total/index.php">Ativ.4</a>
+                    <a class="nav-link active" href="#">Ativ.4 <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Ativ.5</a>
@@ -46,54 +46,60 @@
         <div class="row text-center mt-5">
             <div class="col-12">
                 <h1>Atividade de Programação Web III</h1>
-                <h5>Digite os dados e será exibido uma mensagem de boas-vindas.</h5>
+                <h5>Digite os dados e será exibido o valor total do Produto.</h5>
             </div>
         </div>
     </div>
 
     <div class="container p-5 border border-dark mt-5 col-6">
 
-        <form name="frmboasvindas" action="boasvindas.php" method="POST">
+        <form name="frmtotal" action="total.php" method="POST">
 
             <div class="text-center">
-                <h2>Informe seus dados</h2>
+                <h2>Preencha todos os dados do Produto</h2>
             </div>
 
             <div class="row text-center mt-4">
 
                 <div class="col-4">
                     <div class="form-group tex-center">
-                        Nome<input type="text" class="form-control" id="nome" name="nome" required>
+                        Nome do Produto<input type="text" class="form-control" id="nomep" name="nomep" required>
                     </div>
                 </div>
 
                 <div class="col-4">
                     <div class="form-group tex-center">
-                        Idade<input type="number" class="form-control" id="idade" name="idade" required>
+                        Valor<input type="number" class="form-control" id="valor" name="valor" required>
                     </div>
                 </div>
 
                 <div class="col-4">
                     <div class="form-group tex-center">
-                        Sexo
+                        Quantidade<input type="number" class="form-control" id="quant" name="quant" required>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    Pagamento:
+                </div>
+
+                <div class="col-4">
+                    <div class="form-group">
                         <div class="row">
-                            <div class="col-6">
-                                <div class="form-check form-check-inline mt-2">
-                                    <input class="form-check-input" type="radio" name="sexo" id="sexo" value="fem" required>
-                                    <label class="form-check-label" for="sexo">Feminino</label>
-                                </div>
+                            <div class="form-check form-check-inline mt-2">
+                                <input class="form-check-input" type="radio" name="pagamento" id="pagamento" value="vista" required>
+                                <label class="form-check-label" for="sexo">À vista (10% desconto)</label>
                             </div>
 
-                            <div class="col-6">
-                                <div class="form-check form-check-inline mt-2">
-                                    <input class="form-check-input" type="radio" name="sexo" id="sexo" value="masc" required>
-                                    <label class="form-check-label" for="sexo">Masculino</label>
-                                </div>
+                            <div class="form-check form-check-inline mt-2">
+                                <input class="form-check-input" type="radio" name="pagamento" id="pagamento" value="parcel" required>
+                                <label class="form-check-label" for="sexo">Parcelado em 2x</label>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="row text-center mt-3">
                 <div class="col-6">
                     <button type="submit" class="btn btn-success btn-lg">Verificar</button>

@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>Atividade Boas Vindas</title>
+    <title>Atividade Total</title>
 </head>
 
 <body>
@@ -18,39 +18,45 @@
         <div class="row text-center mt-5">
             <div class="col-12">
                 <h1>Atividade de Programação Web III</h1>
-                <h5>Digite os dados e será exibido uma mensagem de boas-vindas.</h5>
+                <h5>Digite os dados e será exibido o valor total do Produto.</h5>
             </div>
         </div>
     </div>
 
     <div class="container p-5 border border-dark mt-5 col-6">
 
-        <form name="frmparimpar" action="boasvindas.php" method="POST">
+        <form name="frmtotal" action="total.php" method="POST">
 
-            <?php
+        <?php
 
-            $nome = $_POST['nome'];
-            $idade = $_POST['idade'];
-            $sexo = $_POST['sexo'];
+            $produto = $_POST['nomep'];
+            $valor = $_POST['valor'];
+            $quantidade = $_POST['quant'];
+            $pagamento = $_POST['pagamento'];
 
-            if ($sexo == 'fem') {
-                echo "<h3>Bem-Vinda $nome!</h3>";
+            echo "<h3>Produto: $produto</h3>";
+            echo "<h3>Valor: $valor</h3>";
+            echo "<h3>Quantidade: $quantidade</h3>";
+
+            if ($pagamento == 'vista'){
+
+                $valorvista = ($valor * $quantidade);
+                $valorvistadesc =  $valorvista  * (10 / 100); 
+                $valorvistapagardesc = $valorvista - $valorvistadesc;
+
+                echo "<h3>Total: $valorvista </h3>";
+                echo "<h3>Total com desconto à vista: $valorvistapagardesc </h3>";
             } else {
-                echo "<h3>Bem-Vindo $nome!</h3>";
+
+                $valorparcel = ($valor * $quantidade);
+                $parcel = $valorparcel / 2;
+                echo "<h3>Total: $valorparcel </h3>";
+                echo "<h3>Total com desconto à vista: 2x de $parcel </h3>";
             }
+        ?>
 
-            if ($idade < 16) {
-                echo "<h3>Voto Proibido</h3>";
-
-            } else if ($idade >= 16 && $idade < 18 || $idade > 70 ) {
-                echo "<h3>Seu voto é opcional...</h3>";
-
-            } else {
-                echo "<h3>Seu voto é obrigatório!</h3>";
-            }
-
-            ?>
-            <div class="row text-center mt-3">
+            
+        <div class="row text-center mt-3">
                 <div class="col-12">
                     <a href="index.php" class="btn btn-success btn-lg">Voltar</a>
                 </div>
