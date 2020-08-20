@@ -13,40 +13,27 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-success">
-        <a class="navbar-brand active" href="index.php">Página Inicial<span class="sr-only">(current)</span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="maior/index.php">Ativ.1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="par/index.php">Ativ.2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="boasvindas/index.php">Ativ.3</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="total/index.php">Ativ.4</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="tabela/index.php">Ativ.5</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="tabela2/index.php">Ativ.6</a>
-                </li>
-            </ul>
+
+    <div class="container-fluid">
+        <div class="row text-center mt-5 mb-5">
+            <div class="col-12">
+                <h1>Atividades de Programação Web III</h1>
+            </div>
         </div>
-    </nav>
-
-    <div class="container text-center mt-5">
-
-        <h1>Ops... Página em Manutenção!</h1>
-
     </div>
+
+    <div class="container">
+        <div class="list-group">
+            <a href="maior/index.php" class="list-group-item list-group-item-action list-group-item list-group-item-info">Atividade 1 (Maior)</a>
+            <a href="par/index.php" class="list-group-item list-group-item-action list-group-item list-group-item-info">Atividade 2 (Par - Ímpar)</a>
+            <a href="boasvindas/index.php" class="list-group-item list-group-item-action list-group-item list-group-item-info">Atividade 3 (Boas Vindas)</a>
+            <a href="total/index.php" class="list-group-item list-group-item-action list-group-item list-group-item-info">Atividade 4 (Valor Total)</a>
+            <a href="tabela/index.php" class="list-group-item list-group-item-action list-group-item list-group-item-info">Atividade 5 (1ª Tabela)</a>
+            <a href="tabela2/index.php" class="list-group-item list-group-item-action list-group-item list-group-item-info">Atividade 6 (2ª Tabela)</a>
+        </div>
+    </div>
+
+
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

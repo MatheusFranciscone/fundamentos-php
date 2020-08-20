@@ -13,35 +13,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-success">
-        <a class="navbar-brand " href="../index.php">Página Inicial</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="../maior/index.php">Ativ.1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../par/index.php">Ativ.2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../boasvindas/index.php">Ativ.3</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Ativ.4 <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../tabela/index.php">Ativ.5</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../tabela2/index.php">Ativ.6</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+    
     <div class="container-fluid">
         <div class="row text-center mt-5">
             <div class="col-12">
@@ -101,12 +73,16 @@
             </div>
 
             <div class="row text-center mt-3">
-                <div class="col-6">
+            <div class="col-4">
                     <button type="submit" class="btn btn-success btn-lg">Verificar</button>
                 </div>
 
-                <div class="col-6">
+                <div class="col-4">
                     <button type="reset" class="btn btn-success btn-lg">Limpar</button>
+                </div>
+
+                <div class="col-4">
+                    <a href="../index.php" class="btn btn-success btn-lg">Voltar</a>
                 </div>
             </div>
         </form>
