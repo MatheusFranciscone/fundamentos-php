@@ -23,40 +23,20 @@
         </div>
     </div>
 
-    <div class="container p-5 border border-dark mt-5 col-6">
+    <div class="container border mt-5">
 
         <form name="frmmaior" action="maior.php" method="POST">
 
-            <div class="text-center">
-                <h2>Verifica o Maior Número</h2>
-            </div>
+            <h2>Verifica o Maior Número</h2>
 
-            <div class="row text-center mt-4">
+            Valor 1: <input type="number"id="num1" name="num1" required>
+            <br><br>
+            Valor 2: <input type="number"  id="num2" name="num2" required>
 
-                <div class="col-6">
-                    <div class="form-group tex-center">
-                        Valor 1<input type="number" class="form-control" id="num1" name="num1" required>
-                    </div>
-                </div>
-
-                <div class="col-6">
-                    <div class="form-group">
-                        Valor 2<input type="number" class="form-control" id="num2" name="num2" required>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center mt-3">
-            <div class="col-4">
-                    <button type="submit" class="btn btn-success btn-lg">Verificar</button>
-                </div>
-
-                <div class="col-4">
-                    <button type="reset" class="btn btn-success btn-lg">Limpar</button>
-                </div>
-
-                <div class="col-4">
-                    <a href="../index.php" class="btn btn-success btn-lg">Voltar</a>
-                </div>
+            <div class="mb-2 mt-4">
+                <input type="submit" value="Verificar">
+                <input type="reset" value="Limpar" onclick="location.reload()">
+                <input type="reset" value="Voltar" onclick="location.replace('../index.php');">
             </div>
         </form>
 

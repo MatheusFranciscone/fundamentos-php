@@ -23,39 +23,33 @@
         </div>
     </div>
 
-    <div class="container p-5 border border-dark mt-5 col-6">
+    <div class="container border mt-5">
 
-        <form name="frmparimpar" action="boasvindas.php" method="POST">
+        <?php
 
-            <?php
+        $nome = $_POST['nome'];
+        $idade = $_POST['idade'];
+        $sexo = $_POST['sexo'];
 
-            $nome = $_POST['nome'];
-            $idade = $_POST['idade'];
-            $sexo = $_POST['sexo'];
+        if ($sexo == 'fem') {
+            echo "<h3>Bem-Vinda $nome!</h3>";
+        } else {
+            echo "<h3>Bem-Vindo $nome!</h3>";
+        }
 
-            if ($sexo == 'fem') {
-                echo "<h3>Bem-Vinda $nome!</h3>";
-            } else {
-                echo "<h3>Bem-Vindo $nome!</h3>";
-            }
+        if ($idade < 16) {
+            echo "<h3>Voto Proibido</h3>";
+        } else if ($idade >= 16 && $idade < 18 || $idade > 70) {
+            echo "<h3>Seu voto é opcional...</h3>";
+        } else {
+            echo "<h3>Seu voto é obrigatório!</h3>";
+        }
 
-            if ($idade < 16) {
-                echo "<h3>Voto Proibido</h3>";
+        ?>
 
-            } else if ($idade >= 16 && $idade < 18 || $idade > 70 ) {
-                echo "<h3>Seu voto é opcional...</h3>";
-
-            } else {
-                echo "<h3>Seu voto é obrigatório!</h3>";
-            }
-
-            ?>
-            <div class="row text-center mt-3">
-                <div class="col-12">
-                    <a href="index.php" class="btn btn-success btn-lg">Voltar</a>
-                </div>
-            </div>
-        </form>
+        <div class="mb-2">
+            <input type="submit" value="Voltar" onclick="location.replace('index.php');">
+        </div>
 
     </div>
 

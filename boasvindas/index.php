@@ -23,61 +23,26 @@
         </div>
     </div>
 
-    <div class="container p-5 border border-dark mt-5 col-6">
+    <div class="container border mt-5">
 
         <form name="frmboasvindas" action="boasvindas.php" method="POST">
 
-            <div class="text-center">
-                <h2>Informe seus dados</h2>
-            </div>
+            <h2>Informe seus dados</h2>
 
-            <div class="row text-center mt-4">
+            Nome: <input type="text" id="nome" name="nome" required>
+            <br><br>
+            Idade: <input type="number" id="idade" name="idade" required>
+            <br><br>
+            Sexo:
+            <input type="radio" name="sexo" id="sexo" value="fem" required>
+            <label>Feminino</label>
+            <input type="radio" name="sexo" id="sexo" value="masc" required>
+            <label>Masculino</label>
 
-                <div class="col-4">
-                    <div class="form-group tex-center">
-                        Nome<input type="text" class="form-control" id="nome" name="nome" required>
-                    </div>
-                </div>
-
-                <div class="col-4">
-                    <div class="form-group tex-center">
-                        Idade<input type="number" class="form-control" id="idade" name="idade" required>
-                    </div>
-                </div>
-
-                <div class="col-4">
-                    <div class="form-group tex-center">
-                        Sexo
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="form-check form-check-inline mt-2">
-                                    <input class="form-check-input" type="radio" name="sexo" id="sexo" value="fem" required>
-                                    <label class="form-check-label" for="sexo">Feminino</label>
-                                </div>
-                            </div>
-
-                            <div class="col-6">
-                                <div class="form-check form-check-inline mt-2">
-                                    <input class="form-check-input" type="radio" name="sexo" id="sexo" value="masc" required>
-                                    <label class="form-check-label" for="sexo">Masculino</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center mt-3">
-                <div class="col-4">
-                    <button type="submit" class="btn btn-success btn-lg">Verificar</button>
-                </div>
-
-                <div class="col-4">
-                    <button type="reset" class="btn btn-success btn-lg">Limpar</button>
-                </div>
-
-                <div class="col-4">
-                    <a href="../index.php" class="btn btn-success btn-lg">Voltar</a>
-                </div>
+            <div class="mb-2 mt-4">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar" onclick="location.reload()">
+                <input type="reset" value="Voltar" onclick="location.replace('../index.php');">
             </div>
         </form>
 

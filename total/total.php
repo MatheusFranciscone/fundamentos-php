@@ -23,45 +23,41 @@
         </div>
     </div>
 
-    <div class="container p-5 border border-dark mt-5 col-6">
+    <div class="container border mt-5">
 
-        <form name="frmtotal" action="total.php" method="POST">
 
         <?php
 
-            $produto = $_POST['nomep'];
-            $valor = $_POST['valor'];
-            $quantidade = $_POST['quant'];
-            $pagamento = $_POST['pagamento'];
+        $produto = $_POST['nomep'];
+        $valor = $_POST['valor'];
+        $quantidade = $_POST['quant'];
+        $pagamento = $_POST['pagamento'];
 
-            echo "<h3>Produto: $produto</h3>";
-            echo "<h3>Valor: $valor</h3>";
-            echo "<h3>Quantidade: $quantidade</h3>";
+        echo "<h3>Produto: $produto</h3>";
+        echo "<h3>Valor: $valor</h3>";
+        echo "<h3>Quantidade: $quantidade</h3>";
 
-            if ($pagamento == 'vista'){
+        if ($pagamento == 'vista') {
 
-                $valorvista = ($valor * $quantidade);
-                $valorvistadesc =  $valorvista  * (10 / 100); 
-                $valorvistapagardesc = $valorvista - $valorvistadesc;
+            $valorvista = ($valor * $quantidade);
+            $valorvistadesc =  $valorvista  * (10 / 100);
+            $valorvistapagardesc = $valorvista - $valorvistadesc;
 
-                echo "<h3>Total: $valorvista </h3>";
-                echo "<h3>Total com desconto à vista: $valorvistapagardesc </h3>";
-            } else {
+            echo "<h3>Total: $valorvista </h3>";
+            echo "<h3>Total com desconto à vista: $valorvistapagardesc </h3>";
+        } else {
 
-                $valorparcel = ($valor * $quantidade);
-                $parcel = $valorparcel / 2;
-                echo "<h3>Total: $valorparcel </h3>";
-                echo "<h3>Total com desconto à vista: 2x de $parcel </h3>";
-            }
+            $valorparcel = ($valor * $quantidade);
+            $parcel = $valorparcel / 2;
+            echo "<h3>Total: $valorparcel </h3>";
+            echo "<h3>Total com desconto à vista: 2x de $parcel </h3>";
+        }
         ?>
 
-            
-        <div class="row text-center mt-3">
-                <div class="col-12">
-                    <a href="index.php" class="btn btn-success btn-lg">Voltar</a>
-                </div>
-            </div>
-        </form>
+        <div class="mb-2">
+            <input type="submit" value="Voltar" onclick="location.replace('index.php');">
+        </div>
+
 
     </div>
 

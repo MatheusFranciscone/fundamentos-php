@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    
+
     <div class="container-fluid">
         <div class="row text-center mt-5">
             <div class="col-12">
@@ -23,67 +23,32 @@
         </div>
     </div>
 
-    <div class="container p-5 border border-dark mt-5 col-6">
+    <div class="container border mt-5">
 
         <form name="frmtotal" action="total.php" method="POST">
 
-            <div class="text-center">
-                <h2>Preencha todos os dados do Produto</h2>
-            </div>
+            <h2>Preencha todos os dados do Produto</h2>
 
-            <div class="row text-center mt-4">
 
-                <div class="col-4">
-                    <div class="form-group tex-center">
-                        Nome do Produto<input type="text" class="form-control" id="nomep" name="nomep" required>
-                    </div>
-                </div>
+            Nome do Produto: <input type="text" id="nomep" name="nomep" required>
+            <br><br>
+            Valor: <input type="number" id="valor" name="valor" required>
+            <br><br>
+            Quantidade: <input type="number" id="quant" name="quant" required>
+            <br><br>
+            Pagamento:
+            <br>
+            <input type="radio" name="pagamento" id="pagamento" value="vista" required>
+            <label>À vista (10% desconto)</label>
+            <br>
+            <input type="radio" name="pagamento" id="pagamento" value="parcel" required>
+            <label>Parcelado em 2x</label>
 
-                <div class="col-4">
-                    <div class="form-group tex-center">
-                        Valor<input type="number" class="form-control" id="valor" name="valor" required>
-                    </div>
-                </div>
 
-                <div class="col-4">
-                    <div class="form-group tex-center">
-                        Quantidade<input type="number" class="form-control" id="quant" name="quant" required>
-                    </div>
-                </div>
-
-                <div class="col-4">
-                    Pagamento:
-                </div>
-
-                <div class="col-4">
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="form-check form-check-inline mt-2">
-                                <input class="form-check-input" type="radio" name="pagamento" id="pagamento" value="vista" required>
-                                <label class="form-check-label" for="sexo">À vista (10% desconto)</label>
-                            </div>
-
-                            <div class="form-check form-check-inline mt-2">
-                                <input class="form-check-input" type="radio" name="pagamento" id="pagamento" value="parcel" required>
-                                <label class="form-check-label" for="sexo">Parcelado em 2x</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row text-center mt-3">
-            <div class="col-4">
-                    <button type="submit" class="btn btn-success btn-lg">Verificar</button>
-                </div>
-
-                <div class="col-4">
-                    <button type="reset" class="btn btn-success btn-lg">Limpar</button>
-                </div>
-
-                <div class="col-4">
-                    <a href="../index.php" class="btn btn-success btn-lg">Voltar</a>
-                </div>
+            <div class="mb-2 mt-3">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar" onclick="location.reload()">
+                <input type="reset" value="Voltar" onclick="location.replace('../index.php');">
             </div>
         </form>
 

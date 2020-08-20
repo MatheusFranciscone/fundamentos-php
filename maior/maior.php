@@ -9,7 +9,6 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-
     <title>Atividade Maior</title>
 </head>
 
@@ -24,50 +23,31 @@
         </div>
     </div>
 
-    <div class="container p-5 border border-dark mt-5 col-6">
+    <div class="container border mt-5">
 
-        <form name="frmparimpar" action="parimpar.php" method="POST">
+        <h1>Resultado:</h1>
 
-            <div class="text-center">
-                <h1>Resultado:</h1>
-            </div>
+        <?php
+        $numero1 = $_POST['num1'];
+        $numero2 = $_POST['num2'];
 
-            <div class="row text-center mt-4">
+        if ($numero1 == $numero2) {
 
-                <div class="col-12">
-                    <div class="form-group tex-center">
+            echo "<h3>$numero1 e $numero2 são iguais!</h3>";
+        } else if ($numero1 > $numero2) {
 
-                        <?php
-                        $numero1 = $_POST['num1'];
-                        $numero2 = $_POST['num2'];
+            echo "<h3>$numero1 é maior que $numero2!</h3>";
+        } else {
 
-                        if ($numero1 == $numero2) {
+            echo "<h3>$numero2 é maior que $numero1!</h3>";
+        }
+        ?>
 
-                            echo "<h3>$numero1 e $numero2 são iguais!</h3>";
-
-                        } else if ($numero1 > $numero2) {
-
-                            echo "<h3>$numero1 é maior que $numero2!</h3>";
-
-                        } else {
-
-                            echo "<h3>$numero2 é maior que $numero1!</h3>";
-
-                        }
-                        ?>
-
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center mt-3">
-                <div class="col-12">
-                    <a href="index.php" class="btn btn-success btn-lg">Voltar</a>
-                </div>
-            </div>
-        </form>
+        <div class="mb-2">
+            <input type="submit" value="Voltar" onclick="location.replace('index.php');">
+        </div>
 
     </div>
-
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

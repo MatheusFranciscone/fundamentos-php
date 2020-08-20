@@ -24,42 +24,28 @@
         </div>
     </div>
 
-    <div class="container p-5 border border-dark mt-5 col-6">
+    <div class="container border mt-5">
 
-        <form name="frmparimpar" action="parimpar.php" method="POST">
+        <h1>Resultado:</h1>
 
-            <div class="text-center">
-                <h1>Resultado:</h1>
-            </div>
+        <?php
 
-            <div class="row text-center mt-4">
+        $numero = $_POST['num'];
 
-                <div class="col-12">
-                    <div class="form-group tex-center">
+        if ($numero % 2 == 0) {
+            echo "<h3>$numero é Par!</h3>";
+        } else {
+            echo "<h3>$numero é Ímpar!</h3>";
+        }
 
-                        <?php
+        ?>
 
-                        $numero = $_POST['num'];
-
-                        if ($numero % 2 == 0) {
-                            echo "<h3>$numero é Par!</h3>";
-                        } else {
-                            echo "<h3>$numero é Ímpar!</h3>";
-                        }
-
-                        ?>
-
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center mt-3">
-                <div class="col-12">
-                    <a href="index.php" class="btn btn-success btn-lg">Voltar</a>
-                </div>
-            </div>
-        </form>
+        <div class="mb-2">
+            <input type="submit" value="Voltar" onclick="location.replace('index.php');">
+        </div>
 
     </div>
+
 
 
 
