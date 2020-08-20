@@ -36,7 +36,7 @@
                     <a class="nav-link" href="tabela/index.php">Ativ.5</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Ativ.6</a>
+                    <a class="nav-link" href="tabela2/index.php">Ativ.6</a>
                 </li>
             </ul>
         </div>

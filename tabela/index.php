@@ -35,7 +35,7 @@
                     <a class="nav-link active" href="#">Ativ.5 <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Ativ.6</a>
+                    <a class="nav-link" href="../tabela2/index.php">Ativ.6</a>
                 </li>
             </ul>
         </div>

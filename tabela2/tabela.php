@@ -12,11 +12,11 @@
 
 <body>
 
-    <div class="container-fluid">
+<div class="container-fluid">
         <div class="row text-center mt-5">
             <div class="col-12">
                 <h1>Atividade de Programação Web III</h1>
-                <h5>Selecione a dimensão e informe os valores para criar uma tabela.</h5>
+                <h5>Selecione a quantidade de colunas para criar uma tabela.</h5>
             </div>
         </div>
     </div>
@@ -24,54 +24,37 @@
     <div class=" container border m-5">
         <?php
 
-        //função para receber os parâmetros tanto pelo POST, quanto para o GET e estrai eles
         extract($_REQUEST, EXTR_OVERWRITE);
 
-        if ($dimensao == "uni") {
+        $n = 0;
+        echo ("<table class='table'>");
+        echo ("<tr> <h1> Tabela de Imagens: </h1> </tr>");
 
-            echo ("<h1>Tabela Unidimensional com $linhas linha(s): </h1>");
-            echo ("<table class='table table-striped table-dark'>");
+        for ($i = 1; $i <= 20; $i++) {
+            # code...
 
-            for ($i = 1; $i <= $linhas; $i++) {
-                # code...
-
-                echo ("<tr> <th> Linha $i </th> </tr>");
+            if ($n == 0) {
+                echo ("<tr>");
             }
-            echo ("</table>");
-        } else {
 
-            echo ("<h1>Tabela com $linhas linha(s) e $colunas colunas: </h1>");
-            echo ("<table class='table table-striped table-dark'>");
+            echo ("<td class='text-center'> <img src='Imagens/$i.png'> </td>");
+            $n++;
 
-            // contador para fazer a quebra de linhas
-            $n = 0;
-
-            for ($i = 1; $i <= ($linhas * $colunas); $i++) {
-                # code...
-
-                if ($n == 0) {
-                    echo ("<tr>");
-                }
-
-                echo ("<td> Célula $i </td>");
-
-                $n++;
-
-                if ($n == $colunas) {
-                    echo ("</tr>");
-                    $n = 0;
-                }
+            if ($n == $colunas) {
+                echo ("</tr>");
+                $n = 0;
             }
-            echo ("</table>");
         }
+
+        echo ("</table>");
 
         ?>
 
         <div class="mb-2">
             <input type="submit" value="Voltar" onclick="location.replace('index.php');">
         </div>
-    </div>
 
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
